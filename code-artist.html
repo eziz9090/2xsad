@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- 
+    SITE 1101 Principles of Information Systems 
+    (c)202X by Name Surname 
+    Submitted in partial fulfillment of the requirements of the course.
+-->
+<html>
+    <head>
+        <link rel="icon" href="media/ada_logo_color.png" type="image/png">
+        <title>Homework 3: Programming art</title>
+        <link rel="stylesheet" href="styles.css">  
+        <script type="text/javascript" src="scripts.js"></script>      
+    </head>
+    
+    <body>
+
+        <header>
+            <div class="container">
+                <nav>
+                    <a href="index.html"><img src="media/2XSAD_logo.png" alt="Logo" width="80px" height="10%" class="logo"></a>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="team-members.html">About Us</a></li>
+                        <li><a href="hour-of-code.html">Hour of Code</a></li>
+                        <li><a href="web-project.html">Website Project</a></li>
+                        <li><a href="code-artist.html">Code Artist</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="social-links">
+            <a href="https://www.instagram.com/ada.site.team28?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img class="inst-icon" src="media/Icons/Instagram-logo.png" /></a>
+            <a href="https://www.youtube.com/@SITETeam28" target="_blank"><img class="youtube-icon" src="media/Icons/Youtube-logo.png" /></a>
+        </div>
+
+        <main id="main-code-artist">
+            <div style="text-align:center">
+                <canvas id="art-canvas" width="640" height="640">
+                    Sorry ... your browser doesn't support the HTML5 canvas element.
+                </canvas>        
+            </div>          
+
+            <script type="text/javascript">
+                // Get reference to the 2D context of the canvas
+                let canvas = document.getElementById("art-canvas");
+                let context = canvas.getContext("2d");
+                // Set the color for drawing lines using red, green and blue components
+                // context.strokeStyle = 'rgb(255, 0, 0)';
+                context.strokeStyle = `rgb(${255 * Math.random()}, ${255 * Math.random()}, ${255 * Math.random()})`;
+                DrawSpiral(context);
+            </script>
+        </main>
+    </body>
+</html>
